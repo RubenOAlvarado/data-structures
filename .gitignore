@@ -1,0 +1,52 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.log
+*.javadoc
+*.hprof
+*.DS_Store
+*.project
+*.classpath
+*.settings/
+target/
+bin/
+out/
+
+# Golang
+*.exe
+*.test
+*.out
+*.mod
+*.sum
+vendor/
+bin/
+coverage.out
+
+# TypeScript
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# General
+.env
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+# OS generated
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
