@@ -28,6 +28,25 @@ function main(){
     console.log(`Linked list tail: ${myLinkedList.getLastNode()?.value}`);
     console.log("Getting index 2 element: ", myLinkedList.get(2));
     console.log("Getting index 5 element: ", myLinkedList.get(5));
+    console.log("Setting index 2 element to 100");
+    myLinkedList.set(2, 100);
+    console.log("Linked List after setting index 2: ");
+    console.log(myLinkedList.get(2));
+    console.log("Final Linked List: ");
+    console.log(myLinkedList);
+    console.log("Inserting 200 at index 3");
+    myLinkedList.insert(3, 200);
+    console.log("Linked List after inserting 200 at index 3: ");
+    console.log(myLinkedList);
+    console.log("Node at index 3: ", myLinkedList.get(3));
+    console.log("Linked list size: ", myLinkedList.size());
+    console.log("Clearing the linked list");
+    myLinkedList.clear();
+    console.log("Linked List after clearing: ");
+    console.log(myLinkedList);
+    console.log("Length of Linked List after clearing: ", myLinkedList.length);
+    console.log("Final Linked List: ");
+    console.log({...myLinkedList});
 }
 
 main();

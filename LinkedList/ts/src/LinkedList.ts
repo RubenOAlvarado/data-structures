@@ -118,7 +118,7 @@ export class LinkedList<T>{
         return temp; // Return the last node
     }
 
-    get(index: number): T | null {
+    get(index: number): Node<T> | null {
         // Get the value at a specific index in the list
         if (index < 0 || index >= this.length) {
             return null; // Index out of bounds
@@ -131,6 +131,66 @@ export class LinkedList<T>{
             }
         }
 
-        return currentNode ? currentNode.value : null; // Return the value or null if not found
+        return currentNode; // Return the value or null if not found
+    }
+
+    set(index: number, value: T): boolean {
+        const tempNode = this.get(index);
+        
+        if(tempNode){
+            tempNode.value = value; // Update the value at the index
+            return true; // Return true if the value was set successfully
+        }
+
+        return false; // Return false if the index was invalid or the value could not be set
+    }
+
+    insert(index: number, value: T): boolean {
+        // Insert a new node with the given value at a specific index
+        if (index < 0 || index > this.length) {
+            return false; // Index out of bounds
+        }
+
+        if (index === 0) {
+            this.unshift(value); // If inserting at the head, use unshift
+            return true;
+        }
+
+        if (index === this.length) {
+            this.push(value); // If inserting at the tail, use push
+            return true;
+        }
+
+        // Create a new node and insert it at the specified index
+        const newNode = new Node(value);
+        let currentNode = this.get(index - 1); // Get the node before the index
+        // If currentNode is found, link the new node
+
+        if (currentNode) {
+            newNode.next = currentNode.next; // Link the new node to the next node
+            currentNode.next = newNode; // Link the previous node to the new node
+            this.length++; // Increment length
+            return true; // Return true if insertion was successful
+        }
+
+        return false; // Return false if insertion failed
+    }
+
+    size(): number {
+        let temp = this.head;
+        let count = 0;
+
+        while (temp) {
+            count++; // Count each node in the list
+            temp = temp.next; // Move to the next node
+        }
+        return count; // Return the total count of nodes
+    }
+
+    clear(): void {
+        // Clear the linked list by setting head and tail to null
+        this.head = null;
+        this.tail = null;
+        this.length = 0; // Reset length to 0
     }
 }
