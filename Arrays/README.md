@@ -5,9 +5,15 @@ They can be used to store a collection of data, such as a list of numbers, strin
 
 ## Custom Array Implementation
 I implemented a custom array class in TypeScript, Java, and Go. The custom array class includes methods for adding, removing, and accessing elements in the array. The implementation is designed to be simple and easy to understand, while also being efficient and flexible:
-- [TypeScript Implementation](./custom-array/ts)
-- [Java Implementation](./custom_array/java) (soon)
-- [Go Implementation](./custom_array/go) (soon)
+- [TypeScript Implementation](./ts)
+- [Java Implementation](./java) (soon)
+- [Go Implementation](./go) (soon)
+
+## Usage
+Arrays can be used in various applications, such as:
+- Storing a list of items, such as numbers, strings, or objects
+- Implementing algorithms that require sequential access to elements
+- Performing operations on collections of data, such as sorting, searching, and filtering
 
 ## Examples of working with arrays:
 - [Palindrome](https://github.com/RubenOAlvarado/algorithms/blob/main/palindrome/README.md)
