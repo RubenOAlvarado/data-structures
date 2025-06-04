@@ -39,4 +39,37 @@ export class Stack<T> {
         // Return the value of the popped node
         return poppedNode.value;
     }
+
+    min(): T | null {
+        if(this.first === null) {
+            return null; // Stack is empty
+        }
+        let min = this.first.value;
+        let currentNode = this.first.next;
+        // Traverse the stack to find the minimum value
+        while(currentNode !== null) {
+            if(currentNode.value < min) {
+                min = currentNode.value;
+            }
+            currentNode = currentNode.next;
+        }
+        return min; // Return the minimum value found
+    }
+
+    max(): T | null {
+        if(this.first === null) {
+            return null; // Stack is empty
+        }
+
+        let max = this.first.value;
+        let currentNode = this.first.next;
+
+        while(currentNode !== null) {
+            if(currentNode.value > max) {
+                max = currentNode.value;
+            }
+            currentNode = currentNode.next;
+        }
+        return max; // Return the maximum value found
+    }
 }
