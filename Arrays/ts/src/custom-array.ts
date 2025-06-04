@@ -48,7 +48,7 @@ export class CustomArray<T> {
     // created by deleting an item
     private shiftItems(index: number) {
         for (let i = index; i < this.length - 1; i++) {
-        this.data[i] = this.data[i + 1];
+          this.data[i] = this.data[i + 1];
         }
         delete this.data[this.length - 1];
         this.length--;
