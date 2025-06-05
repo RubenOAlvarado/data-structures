@@ -13,3 +13,6 @@ Stacks can be used in various applications, such as:
 - Implementing undo/redo functionality in applications
 - Parsing expressions (e.g., in compilers)
 - Managing resources in a controlled manner (e.g., memory management)
+
+## Examples of working with stacks:
+- [Is Balanced Parentheses](https://github.com/RubenOAlvarado/algorithms/blob/main/isValidParenthesis/README.md)
