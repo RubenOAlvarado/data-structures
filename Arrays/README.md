@@ -6,7 +6,7 @@ They can be used to store a collection of data, such as a list of numbers, strin
 ## Custom Array Implementation
 I implemented a custom array class in TypeScript, Java, and Go. The custom array class includes methods for adding, removing, and accessing elements in the array. The implementation is designed to be simple and easy to understand, while also being efficient and flexible:
 - [TypeScript Implementation](./ts)
-- [Java Implementation](./java) (soon)
+- [Java Implementation](./java) (WIP)
 - [Go Implementation](./go) (soon)
 
 ## Usage
@@ -24,3 +24,4 @@ Arrays can be used in various applications, such as:
 - [Chunk Array](https://github.com/RubenOAlvarado/algorithms/blob/main/chunkArray/README.md)
 - [FizzBuzz](https://github.com/RubenOAlvarado/algorithms/blob/main/fizzbuzz/README.md)
 - [Spiral Matrix](https://github.com/RubenOAlvarado/algorithms/blob/main/spiralMatrix/README.md)
+- [Lonely Integer](https://github.com/RubenOAlvarado/algorithms/tree/main/lonelyInteger)
