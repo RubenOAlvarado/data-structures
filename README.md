@@ -11,3 +11,5 @@ A data structure is a way to organize data, so its easy to access and define. It
 - [Linked Lists](./LinkedLists/README.md)
 - [Doubly Linked Lists](./DoublyLinkedLists/README.md)
 - [Stacks](./Stacks/README.md)
+- [Queues](./Queues/README.md)
+- [Hash Tables](./HashTables/README.md)
