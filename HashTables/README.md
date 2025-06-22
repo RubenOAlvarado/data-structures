@@ -1,7 +1,6 @@
 # Hash Tables
 
 Hash tables are a data structure that implements an associative array abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
-Hash tables are used to implement associative arrays, sets, and other data structures that require fast access to elements based on keys.
 
 ## Implementation
 - [Typescript](./ts)

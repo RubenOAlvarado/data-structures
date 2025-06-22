@@ -53,4 +53,32 @@ export class HashTable<K, V> {
 
         return undefined; // Return undefined if key is not found
     }
+
+    getAllKeys(): K[] {
+        const keys: K[] = []; // Initialize an array to hold all keys
+
+        // Iterate through each bucket in the hash table
+        for (const bucket of this.table) {
+            // For each entry in the bucket, push the key to the keys array
+            for (const [key, value] of bucket) {
+                keys.push(key); // Add the key to the keys array
+            }
+        }
+
+        return keys; // Return the array of keys
+    }
+
+    getAllValues(): V[] {
+        const values: V[] = []; // Initialize an array to hold all values
+
+        // Iterate through each bucket in the hash table
+        for (const bucket of this.table) {
+            // For each entry in the bucket, push the value to the values array
+            for (const [key, value] of bucket) {
+                values.push(value); // Add the value to the values array
+            }
+        }
+
+        return values; // Return the array of values
+    }
 }
