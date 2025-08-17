@@ -11,8 +11,11 @@ function main(){
     console.log("Value for 'apple':", myTable.get("apple")); // Output: 1
     console.log("Value for 'banana':", myTable.get("banana")); // Output: 2
     console.log("Value for 'orange':", myTable.get("orange")); // Output: 3
-    console.log("All keys in the hash table:", myTable.getAllKeys()); // Output: ['apple', 'banana', 'orange']
-    console.log("All values in the hash table:", myTable.getAllValues()); // Output: [1, 2, 3]
+    console.log("Has 'banana':", myTable.has("banana")); // Output: true
+    console.log("Has 'grape':", myTable.has("grape")); // Output: false
+    myTable.remove("banana");
+    console.log("Has 'banana' after removal:", myTable.has("banana")); // Output: false
+    console.log("Program completed.");
 }
 
 main();
