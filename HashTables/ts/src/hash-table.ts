@@ -17,9 +17,13 @@ export class HashTable<K, V> {
         return Math.abs(hash) % this.size;
     }
 
-    set(key: K, value: V): void {
+    private getBucket(key: K): Array<[K, V]> {
         const index = this.hash(key);
-        const bucket = this.table[index];
+        return this.table[index];
+    }
+
+    set(key: K, value: V): void {
+        const bucket = this.getBucket(key);
 
         const existing = bucket.find(([k]) => k === key);
         if (existing) {
@@ -30,23 +34,20 @@ export class HashTable<K, V> {
     }
 
     get(key: K): V | undefined {
-        const index = this.hash(key);
-        const bucket = this.table[index];
+        const bucket = this.getBucket(key);
 
         const entry = bucket.find(([k]) => k === key);
         return entry ? entry[1] : undefined;
     }
 
     has(key: K): boolean {
-        const index = this.hash(key);
-        const bucket = this.table[index];
+        const bucket = this.getBucket(key);
 
         return bucket.some(([k]) => k === key);
     }
 
     remove(key: K): boolean {
-        const index = this.hash(key);
-        const bucket = this.table[index];
+        const bucket = this.getBucket(key);
 
         const entryIndex = bucket.findIndex(([k]) => k === key);
         if (entryIndex !== -1) {
