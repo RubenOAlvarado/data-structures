@@ -12,32 +12,27 @@ export class Queue<T> {
     }
 
     enqueue(value: T): void {
-        if(!this.first) {
-            this.first = new Node(value);
-            this.last = this.first;
-        }
-        
         const newNode = new Node(value);
-        if(this.last) {
-            this.last.next = newNode;
-            this.last = newNode;
-        }
+        if(this.last !== null) this.last.next = newNode;
+        this.last = newNode;
+        if(this.first === null) this.first = this.last;
         this.size++;
     }
 
     dequeue(): T | null {
-        if(!this.first) {
-            return null;
-        }
-        
-        const value = this.first.value;
+        if(this.first === null) return null;
+        const nodeToDequeue = this.first;
         this.first = this.first.next;
+        if(this.first === null) this.last = null;
         this.size--;
-        
-        if(this.size === 0) {
-            this.last = null;
-        }
-        
-        return value;
+        return nodeToDequeue.value;
+    }
+
+    peek(): T | null {
+        return this.first ? this.first.value : null;
+    }
+
+    isEmpty(): boolean {
+        return this.size === 0;
     }
 }
