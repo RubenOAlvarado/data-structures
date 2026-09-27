@@ -35,7 +35,7 @@ The order is the recommended learning path. ✅ means the structure is ready in 
 | 1 | Array | 🚧 | 🚧 | 🚧 | 🚧 |
 | 2 | String | 🚧 | 🚧 | 🚧 | 🚧 |
 | 3 | Linked List | 🚧 | 🚧 | 🚧 | 🚧 |
-| 4 | Stack | ✅ | 🚧 | 🚧 | 🚧 |
+| 4 | Stack | ✅ | ✅ | 🚧 | 🚧 |
 | 5 | Queue | 🚧 | 🚧 | 🚧 | 🚧 |
 | 6 | Deque | 🚧 | 🚧 | 🚧 | 🚧 |
 | 7 | Hash Table | 🚧 | 🚧 | 🚧 | 🚧 |
