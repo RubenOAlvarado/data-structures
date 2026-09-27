@@ -123,6 +123,10 @@ class StackTest {
       stack.push(i);
     }
     assertEquals(count, stack.size());
+    List<Integer> iterated = toList(stack);
+    assertEquals(count, iterated.size());
+    assertEquals(count - 1, iterated.get(0));
+    assertEquals(0, iterated.get(count - 1));
     for (int expected = count - 1; expected >= 0; expected--) {
       assertEquals(expected, stack.pop());
     }

@@ -101,6 +101,10 @@ describe("Stack", () => {
       stack.push(i);
     }
     expect(stack.size).toBe(count);
+    const iterated = [...stack];
+    expect(iterated).toHaveLength(count);
+    expect(iterated[0]).toBe(count - 1);
+    expect(iterated[count - 1]).toBe(0);
     const popped: (number | undefined)[] = [];
     while (!stack.isEmpty()) {
       popped.push(stack.pop());

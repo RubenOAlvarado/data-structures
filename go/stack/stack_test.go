@@ -179,6 +179,13 @@ func TestStack(t *testing.T) {
 		if got := s.Len(); got != count {
 			t.Fatalf("Len() = %d, want %d", got, count)
 		}
+		iterated := slices.Collect(s.All())
+		if len(iterated) != count {
+			t.Fatalf("All() yielded %d values, want %d", len(iterated), count)
+		}
+		if iterated[0] != count-1 || iterated[count-1] != 0 {
+			t.Fatalf("All() went from %d to %d, want from %d to 0", iterated[0], iterated[count-1], count-1)
+		}
 		for want := count - 1; want >= 0; want-- {
 			if v, ok := s.Pop(); v != want || !ok {
 				t.Fatalf("Pop() = (%d, %t), want (%d, true)", v, ok, want)

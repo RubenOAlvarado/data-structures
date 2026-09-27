@@ -103,6 +103,9 @@ def test_handles_many_values() -> None:
     for i in range(count):
         stack.push(i)
     assert len(stack) == count
+    iterated = list(stack)
+    assert len(iterated) == count
+    assert (iterated[0], iterated[-1]) == (count - 1, 0)
     popped = [stack.pop() for _ in range(count)]
     assert popped == list(range(count - 1, -1, -1))
     assert stack.is_empty()
