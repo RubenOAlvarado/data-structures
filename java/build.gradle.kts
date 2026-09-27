@@ -45,9 +45,19 @@ tasks.test {
     }
 }
 
+// With `-Psolution` the tests compile against the solution, so this task also
+// compiles them against the starter: a starter that misses part of the API must
+// fail `check`, not reach learners as a compilation error instead of red tests.
+val compileTestAgainstStarter =
+    tasks.register<JavaCompile>("compileTestAgainstStarter") {
+        source = sourceSets.test.get().java
+        classpath = starter.output + configurations.testCompileClasspath.get()
+        destinationDirectory = layout.buildDirectory.dir("classes/java/testAgainstStarter")
+    }
+
 // `check` always compiles both implementations, whichever one the tests use.
 tasks.check {
-    dependsOn(starter.classesTaskName, solution.classesTaskName)
+    dependsOn(starter.classesTaskName, solution.classesTaskName, compileTestAgainstStarter)
 }
 
 spotless {
