@@ -11,7 +11,7 @@
 
 No hay un paso de instalación aparte. La primera vez que ejecutas `./gradlew`, descarga Gradle, JUnit y, si hace falta, el JDK 21 en tu carpeta de usuario (`~/.gradle`).
 
-En Windows, usa `gradlew.bat` en lugar de `./gradlew`.
+En Windows, escribe `.\gradlew` en lugar de `./gradlew` en PowerShell, o solo `gradlew` en cmd.
 
 ## Estructura
 
