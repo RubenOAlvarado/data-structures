@@ -1,0 +1,62 @@
+# The order of this list is the recommended learning path.
+# `python tools/docs.py` turns it into the catalog table of the root READMEs.
+
+[[structure]]
+slug = "array"
+name = { en = "Array", es = "Arreglo" }
+
+[[structure]]
+slug = "string"
+name = { en = "String", es = "Cadena" }
+
+[[structure]]
+slug = "linked-list"
+name = { en = "Linked List", es = "Lista enlazada" }
+
+[[structure]]
+slug = "stack"
+name = { en = "Stack", es = "Pila" }
+
+[[structure]]
+slug = "queue"
+name = { en = "Queue", es = "Cola" }
+
+[[structure]]
+slug = "deque"
+name = { en = "Deque", es = "Cola doble (deque)" }
+
+[[structure]]
+slug = "hash-table"
+name = { en = "Hash Table", es = "Tabla hash" }
+
+[[structure]]
+slug = "binary-tree"
+name = { en = "Binary Tree", es = "Árbol binario" }
+
+[[structure]]
+slug = "binary-search-tree"
+name = { en = "Binary Search Tree", es = "Árbol binario de búsqueda" }
+
+[[structure]]
+slug = "heap"
+name = { en = "Heap / Priority Queue", es = "Heap / Cola de prioridad" }
+
+[[structure]]
+slug = "trie"
+name = { en = "Trie", es = "Trie" }
+
+[[structure]]
+slug = "graph"
+name = { en = "Graph", es = "Grafo" }
+
+[[structure]]
+slug = "union-find"
+name = { en = "Union-Find", es = "Union-Find (conjuntos disjuntos)" }
+
+[[structure]]
+slug = "lru-cache"
+name = { en = "LRU Cache", es = "Caché LRU" }
+
+[[structure]]
+slug = "lfu-cache"
+name = { en = "LFU Cache", es = "Caché LFU" }

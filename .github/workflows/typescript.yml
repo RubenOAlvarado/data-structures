@@ -1,0 +1,27 @@
+name: TypeScript
+
+on:
+  push:
+    branches: [main]
+    paths: ["typescript/**", ".github/workflows/typescript.yml"]
+  pull_request:
+    paths: ["typescript/**", ".github/workflows/typescript.yml"]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: typescript
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: typescript/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+      - run: npm run typecheck
+      - run: npm run test:solution

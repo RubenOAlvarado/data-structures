@@ -1,0 +1,44 @@
+name: Go
+
+on:
+  push:
+    branches: [main]
+    paths: ["go/**", ".github/workflows/go.yml"]
+  pull_request:
+    paths: ["go/**", ".github/workflows/go.yml"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: go
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go/go.mod
+      - run: go vet ./...
+      - run: go vet -tags solution ./...
+      - run: go test -tags solution ./...
+
+  lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: go
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version: stable
+      - name: gofmt
+        run: |
+          unformatted="$(gofmt -l .)"
+          if [ -n "$unformatted" ]; then
+            echo "Run gofmt -w on:"
+            echo "$unformatted"
+            exit 1
+          fi
+      - run: go run honnef.co/go/tools/cmd/staticcheck@2026.2.1 ./...
+      - run: go run honnef.co/go/tools/cmd/staticcheck@2026.2.1 -tags solution ./...
