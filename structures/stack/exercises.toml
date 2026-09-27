@@ -1,0 +1,59 @@
+# Suggested exercises for the stack. Only the title, the link and our own `focus`:
+# never copy the statement of a problem. `python tools/docs.py` renders this file
+# into the Exercises table of README.md and README.es.md.
+
+[[exercise]]
+id = "baseball-game"
+title = "Baseball Game"
+difficulty = "easy"
+url = "https://leetcode.com/problems/baseball-game/"
+focus = { en = "Use push, pop and peek to keep a running record", es = "Usar push, pop y peek para llevar un registro" }
+
+[[exercise]]
+id = "valid-parentheses"
+title = "Valid Parentheses"
+difficulty = "easy"
+url = "https://leetcode.com/problems/valid-parentheses/"
+focus = { en = "Match each closing bracket with the most recent opening one", es = "Emparejar cada cierre con la apertura más reciente" }
+
+[[exercise]]
+id = "implement-queue-using-stacks"
+title = "Implement Queue using Stacks"
+difficulty = "easy"
+url = "https://leetcode.com/problems/implement-queue-using-stacks/"
+focus = { en = "Reverse the LIFO order with a second stack", es = "Invertir el orden LIFO con una segunda pila" }
+
+[[exercise]]
+id = "min-stack"
+title = "Min Stack"
+difficulty = "medium"
+url = "https://leetcode.com/problems/min-stack/"
+focus = { en = "Extend a stack so every operation, including min, stays O(1)", es = "Extender una pila para que todas sus operaciones, incluido el mínimo, sean O(1)" }
+
+[[exercise]]
+id = "evaluate-reverse-polish-notation"
+title = "Evaluate Reverse Polish Notation"
+difficulty = "medium"
+url = "https://leetcode.com/problems/evaluate-reverse-polish-notation/"
+focus = { en = "Keep operands on a stack until an operator consumes them", es = "Guardar operandos en una pila hasta que un operador los consuma" }
+
+[[exercise]]
+id = "daily-temperatures"
+title = "Daily Temperatures"
+difficulty = "medium"
+url = "https://leetcode.com/problems/daily-temperatures/"
+focus = { en = "Keep pending days on a stack until a warmer day resolves them", es = "Mantener en la pila los días pendientes hasta que uno más cálido los resuelva" }
+
+[[exercise]]
+id = "decode-string"
+title = "Decode String"
+difficulty = "medium"
+url = "https://leetcode.com/problems/decode-string/"
+focus = { en = "Save the outer context on a stack while decoding nested brackets", es = "Guardar el contexto exterior en una pila mientras se decodifican corchetes anidados" }
+
+[[exercise]]
+id = "largest-rectangle-in-histogram"
+title = "Largest Rectangle in Histogram"
+difficulty = "hard"
+url = "https://leetcode.com/problems/largest-rectangle-in-histogram/"
+focus = { en = "Keep candidate bars on a stack and resolve them when a shorter bar appears", es = "Mantener barras candidatas en la pila y resolverlas cuando aparece una más baja" }

@@ -35,7 +35,7 @@ El orden es la ruta de aprendizaje recomendada. ✅ indica que la estructura est
 | 1 | Arreglo | 🚧 | 🚧 | 🚧 | 🚧 |
 | 2 | Cadena | 🚧 | 🚧 | 🚧 | 🚧 |
 | 3 | Lista enlazada | 🚧 | 🚧 | 🚧 | 🚧 |
-| 4 | Pila | ✅ | ✅ | ✅ | ✅ |
+| 4 | [Pila](structures/stack/README.es.md) | ✅ | ✅ | ✅ | ✅ |
 | 5 | Cola | 🚧 | 🚧 | 🚧 | 🚧 |
 | 6 | Cola doble (deque) | 🚧 | 🚧 | 🚧 | 🚧 |
 | 7 | Tabla hash | 🚧 | 🚧 | 🚧 | 🚧 |
