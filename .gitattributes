@@ -1,0 +1,4 @@
+# Normalize line endings: LF everywhere, except Windows batch files.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.jar binary
