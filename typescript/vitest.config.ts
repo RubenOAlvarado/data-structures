@@ -1,4 +1,4 @@
-import { dirname, join } from "node:path";
+import { posix } from "node:path";
 import { defineConfig } from "vitest/config";
 
 // `npm run test:solution` runs Vitest with `--mode solution`. In that mode every
@@ -9,7 +9,8 @@ const useSolution = {
   enforce: "pre" as const,
   resolveId(source: string, importer: string | undefined) {
     if (importer !== undefined && /^\.\/starter(\.[jt]s)?$/.test(source)) {
-      return join(dirname(importer), "solution.ts");
+      // Vite ids always use forward slashes, even on Windows.
+      return posix.join(posix.dirname(importer), "solution.ts");
     }
     return null;
   },
