@@ -26,7 +26,7 @@
 
 Usa `structures/stack` y la carpeta `stack` de cada lenguaje como modelo.
 
-1. **Teoría:** crea `structures/<slug>/README.md` y `README.es.md` con estas secciones: definición, modelo mental (con un diagrama Mermaid), operaciones y complejidad, variantes, cuándo usarla, trade-offs, contrato de la API, constrúyela y ejercicios. Conserva los marcadores `<!-- exercises:start -->` y `<!-- exercises:end -->`.
+1. **Teoría:** crea `structures/<slug>/README.md` y `README.es.md` con estas secciones: definición, modelo mental (con un diagrama Mermaid), operaciones y complejidad (una tabla con tiempo promedio, tiempo en el peor caso y espacio extra), variantes, cuándo usarla, trade-offs, contrato de la API, constrúyela y ejercicios. Conserva los marcadores `<!-- exercises:start -->` y `<!-- exercises:end -->`.
 2. **Ejercicios:** crea `structures/<slug>/exercises.toml` con 3 a 8 ejercicios ordenados por dificultad.
 3. **Código, en todos los lenguajes:**
    - el **starter**: la API pública completa con doc comments (el contrato y la complejidad objetivo), donde cada cuerpo lanza `TODO: not implemented`;

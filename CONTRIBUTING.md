@@ -26,7 +26,7 @@ Thank you for helping! This guide explains the rules of the repository and the s
 
 Use `structures/stack` and the `stack` folder of each language as the model.
 
-1. **Theory:** create `structures/<slug>/README.md` and `README.es.md` with these sections: definition, mental model (with a Mermaid diagram), operations and complexity, variants, when to use it, trade-offs, API contract, build it and exercises. Keep the `<!-- exercises:start -->` and `<!-- exercises:end -->` markers.
+1. **Theory:** create `structures/<slug>/README.md` and `README.es.md` with these sections: definition, mental model (with a Mermaid diagram), operations and complexity (a table with average time, worst-case time and extra space), variants, when to use it, trade-offs, API contract, build it and exercises. Keep the `<!-- exercises:start -->` and `<!-- exercises:end -->` markers.
 2. **Exercises:** create `structures/<slug>/exercises.toml` with 3 to 8 exercises ordered by difficulty.
 3. **Code, in every language:**
    - the **starter**: the complete public API with doc comments (the contract and the target complexity), where every body throws `TODO: not implemented`;

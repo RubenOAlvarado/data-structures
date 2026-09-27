@@ -22,15 +22,15 @@ Cada valor apunta al que tiene debajo. `push` y `pop` solo tocan la cima, así q
 
 ## Operaciones y complejidad
 
-| Operación | Qué hace | Tiempo |
-|---|---|---|
-| `push(value)` | Añade un valor en la cima | O(1) |
-| `pop()` | Quita y devuelve el valor de la cima | O(1) |
-| `peek()` | Devuelve el valor de la cima sin quitarlo | O(1) |
-| `size` / `isEmpty` | Cuenta los valores / comprueba si no hay ninguno | O(1) |
-| iterar | Recorre todos los valores de la cima a la base | O(n) |
+| Operación | Qué hace | Tiempo promedio | Tiempo en el peor caso | Espacio extra |
+|---|---|---|---|---|
+| `push(value)` | Añade un valor en la cima | O(1) | O(1) | O(1) |
+| `pop()` | Quita y devuelve el valor de la cima | O(1) | O(1) | O(1) |
+| `peek()` | Devuelve el valor de la cima sin quitarlo | O(1) | O(1) | O(1) |
+| `size` / `isEmpty` | Cuenta los valores / comprueba si no hay ninguno | O(1) | O(1) | O(1) |
+| iterar | Recorre todos los valores de la cima a la base | O(n) | O(n) | O(1) |
 
-Una pila de n valores ocupa O(n) de espacio. Cada operación usa O(1) de espacio extra.
+Una pila de n valores ocupa O(n) de espacio en total. Con nodos enlazados, el peor caso coincide con el promedio; una pila sobre arreglo tiene un `push` O(n) en el peor caso (ver Variantes).
 
 ## Variantes
 

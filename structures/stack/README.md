@@ -22,15 +22,15 @@ Each value points to the one below it. `push` and `pop` only touch the top, so t
 
 ## Operations and complexity
 
-| Operation | What it does | Time |
-|---|---|---|
-| `push(value)` | Adds a value on top | O(1) |
-| `pop()` | Removes and returns the top value | O(1) |
-| `peek()` | Returns the top value without removing it | O(1) |
-| `size` / `isEmpty` | Counts the values / checks whether there are none | O(1) |
-| iterate | Visits every value from top to bottom | O(n) |
+| Operation | What it does | Average time | Worst-case time | Extra space |
+|---|---|---|---|---|
+| `push(value)` | Adds a value on top | O(1) | O(1) | O(1) |
+| `pop()` | Removes and returns the top value | O(1) | O(1) | O(1) |
+| `peek()` | Returns the top value without removing it | O(1) | O(1) | O(1) |
+| `size` / `isEmpty` | Counts the values / checks whether there are none | O(1) | O(1) | O(1) |
+| iterate | Visits every value from top to bottom | O(n) | O(n) | O(1) |
 
-A stack of n values uses O(n) space. Every operation uses O(1) extra space.
+A stack of n values uses O(n) space in total. With linked nodes the worst case matches the average; an array-backed stack has an O(n) worst-case `push` (see Variants).
 
 ## Variants
 
