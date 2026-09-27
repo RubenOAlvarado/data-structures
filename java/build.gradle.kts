@@ -18,12 +18,12 @@ java {
 // unless the build runs with `-Psolution`.
 val starter: SourceSet = sourceSets.create("starter")
 val solution: SourceSet = sourceSets.create("solution")
-val implementation = if (providers.gradleProperty("solution").isPresent) solution else starter
+val implementationUnderTest = if (providers.gradleProperty("solution").isPresent) solution else starter
 
 sourceSets {
     test {
-        compileClasspath += implementation.output
-        runtimeClasspath += implementation.output
+        compileClasspath += implementationUnderTest.output
+        runtimeClasspath += implementationUnderTest.output
     }
 }
 
