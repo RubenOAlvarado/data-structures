@@ -276,7 +276,15 @@ def build(root: Path) -> tuple[dict[Path, str], list[str]]:
             errors.append(f"structures/{folder.name}: missing exercises.toml")
             continue
         exercises = load_exercises(root, exercises_path, errors)
+        seen: set[str] = set()
         for exercise in exercises:
+            if exercise.id in seen:
+                errors.append(
+                    f"structures/{folder.name}/exercises.toml: exercise id '{exercise.id}'"
+                    " is listed twice"
+                )
+                continue
+            seen.add(exercise.id)
             owner = owners.setdefault(exercise.id, folder.name)
             if owner != folder.name:
                 errors.append(

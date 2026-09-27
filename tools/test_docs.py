@@ -179,6 +179,16 @@ class DocsTest(unittest.TestCase):
             errors,
         )
 
+    def test_rejects_an_exercise_id_used_twice_in_one_file(self) -> None:
+        exercises = self.root / "structures" / "stack" / "exercises.toml"
+        duplicate = EXERCISES.split("\n\n")[1]
+        write(exercises, EXERCISES + "\n" + duplicate)
+        code, errors = self.run_docs("--check")
+        self.assertEqual(code, 1)
+        self.assertIn(
+            "structures/stack/exercises.toml: exercise id 'min-stack' is listed twice", errors
+        )
+
     def test_rejects_a_structure_folder_missing_from_the_catalog(self) -> None:
         write(self.root / "structures" / "queue" / "exercises.toml", "")
         write(self.root / "structures" / "queue" / "README.md", STACK_README)
